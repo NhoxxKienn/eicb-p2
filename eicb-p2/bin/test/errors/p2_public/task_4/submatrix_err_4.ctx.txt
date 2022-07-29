@@ -1,0 +1,5 @@
+
+Mismatching types 'matrix<int>[3][1]' and 'vector<int>[3]':
+
+Faulty node in line 5, column 4:
+> val vector<int>[3] x = m{-1:1:1}{0:1:0};

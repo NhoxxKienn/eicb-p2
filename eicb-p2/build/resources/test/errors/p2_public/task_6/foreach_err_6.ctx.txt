@@ -1,0 +1,9 @@
+
+Invalid assignment in line 8, column 8:
+> Cannot assign constant identifier 'i'.
+
+Faulty node:
+> i
+
+Identifier declaration in line 6, column 12:
+> val float i

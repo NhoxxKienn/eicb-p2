@@ -1,0 +1,139 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="1" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <ValueDefinition line="3" column="4" name="m">
+          <typeSpecifier class="MatrixTypeSpecifier" line="3" column="8">
+            <type class="MatrixType" rows="2" cols="3">
+              <elementType class="IntType"/>
+            </type>
+            <elementTypeSpecifier class="IntTypeSpecifier" line="3" column="15">
+              <type class="IntType"/>
+            </elementTypeSpecifier>
+            <rowsExpression class="IntValue" line="3" column="20" value="2">
+              <type class="IntType"/>
+            </rowsExpression>
+            <colsExpression class="IntValue" line="3" column="23" value="3">
+              <type class="IntType"/>
+            </colsExpression>
+          </typeSpecifier>
+          <type class="MatrixType" reference="../typeSpecifier/type"/>
+          <value class="StructureInit" line="3" column="30">
+            <type class="MatrixType" rows="2" cols="3">
+              <elementType class="IntType"/>
+            </type>
+            <elements>
+              <StructureInit line="3" column="32">
+                <type class="VectorType" dimension="3">
+                  <elementType class="IntType"/>
+                </type>
+                <elements>
+                  <IntValue line="3" column="33" value="1">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="3" column="36" value="2">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="3" column="39" value="3">
+                    <type class="IntType"/>
+                  </IntValue>
+                </elements>
+              </StructureInit>
+              <StructureInit line="3" column="43">
+                <type class="VectorType" dimension="3">
+                  <elementType class="IntType"/>
+                </type>
+                <elements>
+                  <IntValue line="3" column="44" value="4">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="3" column="47" value="5">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="3" column="50" value="6">
+                    <type class="IntType"/>
+                  </IntValue>
+                </elements>
+              </StructureInit>
+            </elements>
+          </value>
+        </ValueDefinition>
+        <ValueDefinition line="5" column="4" name="a">
+          <typeSpecifier class="VectorTypeSpecifier" line="5" column="8">
+            <type class="VectorType" dimension="3">
+              <elementType class="IntType"/>
+            </type>
+            <elementTypeSpecifier class="IntTypeSpecifier" line="5" column="15">
+              <type class="IntType"/>
+            </elementTypeSpecifier>
+            <dimensionExpression class="IntValue" line="5" column="20" value="3">
+              <type class="IntType"/>
+            </dimensionExpression>
+          </typeSpecifier>
+          <type class="VectorType" reference="../typeSpecifier/type"/>
+          <value class="ElementSelect" line="5" column="27">
+            <type class="VectorType" dimension="3">
+              <elementType class="IntType"/>
+            </type>
+            <structExpression class="IdentifierReference" line="5" column="27" name="m">
+              <type class="MatrixType" reference="../../../../ValueDefinition/typeSpecifier/type"/>
+              <declaration class="ValueDefinition" reference="../../../../ValueDefinition"/>
+            </structExpression>
+            <indexExpression class="IntValue" line="5" column="29" value="0">
+              <type class="IntType"/>
+            </indexExpression>
+          </value>
+        </ValueDefinition>
+        <ValueDefinition line="6" column="4" name="b">
+          <typeSpecifier class="VectorTypeSpecifier" line="6" column="8">
+            <type class="VectorType" dimension="3">
+              <elementType class="IntType"/>
+            </type>
+            <elementTypeSpecifier class="IntTypeSpecifier" line="6" column="15">
+              <type class="IntType"/>
+            </elementTypeSpecifier>
+            <dimensionExpression class="IntValue" line="6" column="20" value="3">
+              <type class="IntType"/>
+            </dimensionExpression>
+          </typeSpecifier>
+          <type class="VectorType" reference="../typeSpecifier/type"/>
+          <value class="ElementSelect" line="6" column="27">
+            <type class="VectorType" dimension="3">
+              <elementType class="IntType"/>
+            </type>
+            <structExpression class="IdentifierReference" line="6" column="27" name="m">
+              <type class="MatrixType" reference="../../../../ValueDefinition/typeSpecifier/type"/>
+              <declaration class="ValueDefinition" reference="../../../../ValueDefinition"/>
+            </structExpression>
+            <indexExpression class="IntValue" line="6" column="29" value="1">
+              <type class="IntType"/>
+            </indexExpression>
+          </value>
+        </ValueDefinition>
+        <ValueDefinition line="8" column="4" name="x">
+          <typeSpecifier class="IntTypeSpecifier" line="8" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+          <value class="DotProduct" line="8" column="16">
+            <type class="IntType"/>
+            <leftOperand class="IdentifierReference" line="8" column="16" name="a">
+              <type class="VectorType" reference="../../../../ValueDefinition[2]/typeSpecifier/type"/>
+              <declaration class="ValueDefinition" reference="../../../../ValueDefinition[2]"/>
+            </leftOperand>
+            <rightOperand class="IdentifierReference" line="8" column="21" name="b">
+              <type class="VectorType" reference="../../../../ValueDefinition[3]/typeSpecifier/type"/>
+              <declaration class="ValueDefinition" reference="../../../../ValueDefinition[3]"/>
+            </rightOperand>
+          </value>
+        </ValueDefinition>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records/>
+</Module>

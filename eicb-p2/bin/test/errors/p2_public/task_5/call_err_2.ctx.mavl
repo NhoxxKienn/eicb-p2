@@ -1,0 +1,11 @@
+function void main(){
+    foo();
+}
+
+function void foo(){
+    bar();
+}
+
+function void baz(){
+
+}

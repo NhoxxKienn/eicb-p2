@@ -1,0 +1,4 @@
+function void main(){
+    val vector<int>[1] v = [5];
+	v[0] = 7;
+}

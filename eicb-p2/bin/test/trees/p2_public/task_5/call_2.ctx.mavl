@@ -1,0 +1,7 @@
+function int foo(vector<int>[5] a, vector<int>[5] b) {
+    return (a + b)[3];
+}
+
+function void main (){
+  val int x = foo([1,2,3,4,5], [9,8,7,6,5]);
+}

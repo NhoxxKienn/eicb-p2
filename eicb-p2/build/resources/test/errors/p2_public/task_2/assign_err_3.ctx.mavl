@@ -1,0 +1,5 @@
+function void main(){
+    var int x;
+
+    x[0][0] = 3.14;
+}

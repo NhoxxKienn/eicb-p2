@@ -1,0 +1,105 @@
+7=== Running test case p2_public/task_1/compound_2 ===
+
+
+E=== Test case p2_public/task_1/compound_2 finished successfully ===
+
+7=== Running test case p2_public/task_1/compound_4 ===
+
+
+E=== Test case p2_public/task_1/compound_4 finished successfully ===
+
+5=== Running test case p2_public/task_2/assign_1 ===
+
+
+C=== Test case p2_public/task_2/assign_1 finished successfully ===
+
+5=== Running test case p2_public/task_2/assign_2 ===
+
+
+C=== Test case p2_public/task_2/assign_2 finished successfully ===
+
+5=== Running test case p2_public/task_2/assign_5 ===
+
+
+C=== Test case p2_public/task_2/assign_5 finished successfully ===
+
+9=== Running test case p2_public/task_3/const_expr_1 ===
+
+
+G=== Test case p2_public/task_3/const_expr_1 finished successfully ===
+
+:=== Running test case p2_public/task_4/dot_product_1 ===
+
+
+H=== Test case p2_public/task_4/dot_product_1 finished successfully ===
+
+	;=== Running test case p2_public/task_4/record_types_3 ===
+	
+	
+	I=== Test case p2_public/task_4/record_types_3 finished successfully ===
+	
+
+3=== Running test case p2_public/task_5/call_2 ===
+
+
+
+
+
+A=== Test case p2_public/task_5/call_2 finished successfully ===
+
+
+6=== Running test case p2_public/task_6/foreach_6 ===
+
+
+D=== Test case p2_public/task_6/foreach_6 finished successfully ===
+
+;=== Running test case p2_public/task_1/compound_err_1 ===
+
+
+I=== Test case p2_public/task_1/compound_err_1 finished successfully ===
+
+9=== Running test case p2_public/task_2/assign_err_2 ===
+
+
+G=== Test case p2_public/task_2/assign_err_2 finished successfully ===
+
+9=== Running test case p2_public/task_2/assign_err_3 ===
+
+
+G=== Test case p2_public/task_2/assign_err_3 finished successfully ===
+
+9=== Running test case p2_public/task_2/assign_err_6 ===
+
+
+G=== Test case p2_public/task_2/assign_err_6 finished successfully ===
+
+==== Running test case p2_public/task_3/const_expr_err_1 ===
+
+
+K=== Test case p2_public/task_3/const_expr_err_1 finished successfully ===
+
+<=== Running test case p2_public/task_4/submatrix_err_4 ===
+
+
+J=== Test case p2_public/task_4/submatrix_err_4 finished successfully ===
+
+7=== Running test case p2_public/task_5/call_err_2 ===
+
+
+E=== Test case p2_public/task_5/call_err_2 finished successfully ===
+
+9=== Running test case p2_public/task_5/return_err_2 ===
+
+
+G=== Test case p2_public/task_5/return_err_2 finished successfully ===
+
+:=== Running test case p2_public/task_6/foreach_err_6 ===
+
+
+H=== Test case p2_public/task_6/foreach_err_6 finished successfully ===
+
+:=== Running test case p2_public/task_6/foreach_err_8 ===
+
+
+H=== Test case p2_public/task_6/foreach_err_8 finished successfully ===
+

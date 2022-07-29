@@ -1,0 +1,10 @@
+
+ForEachLoop can not be applied to type int.
+
+Faulty node in line 3, column 4:
+> foreach(var int i : i) {
+> 	val int i = i;
+> }
+
+Applicable types:
+> matrix, vector

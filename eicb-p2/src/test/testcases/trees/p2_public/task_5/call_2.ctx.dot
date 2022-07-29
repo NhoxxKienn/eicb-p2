@@ -1,0 +1,227 @@
+digraph {
+node [shape=Mrecord, style=filled, fillcolor=white, fontname="Calibri"];
+graph [ordering=out, nodesep=0.3, ranksep=1];
+
+# SimpleNode IntType
+node0 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral foo
+node1 [shape=box, label="foo", fillcolor="#FFC6C6", tooltip="foo"]
+
+# SimpleNode IntType
+node2 [label="IntType", tooltip="IntType"]
+
+# Literal 5
+node3 [shape=box, label="5", fillcolor="#cccccc", tooltip="5"]
+
+# SimpleNode IntLiteral
+node4:s -> node3:n
+node4 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode VectorType
+node5:p0:s -> node2:n
+node5:p1:s -> node4:n
+node5 [label="{VectorType|{<p0>ElementType|<p1>Dimension}}", tooltip="VectorType"]
+
+# DeclarationLiteral a
+node6 [shape=box, label="a", fillcolor="#EAFDC5", tooltip="a"]
+
+# PortNode Param
+node7:p0:s -> node5:n
+node7:p1:s -> node6:n
+node7 [label="{Param|{<p0>Type|<p1>Name}}", tooltip="Param"]
+
+# SimpleNode IntType
+node8 [label="IntType", tooltip="IntType"]
+
+# Literal 5
+node9 [shape=box, label="5", fillcolor="#cccccc", tooltip="5"]
+
+# SimpleNode IntLiteral
+node10:s -> node9:n
+node10 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode VectorType
+node11:p0:s -> node8:n
+node11:p1:s -> node10:n
+node11 [label="{VectorType|{<p0>ElementType|<p1>Dimension}}", tooltip="VectorType"]
+
+# DeclarationLiteral b
+node12 [shape=box, label="b", fillcolor="#E4C3F7", tooltip="b"]
+
+# PortNode Param
+node13:p0:s -> node11:n
+node13:p1:s -> node12:n
+node13 [label="{Param|{<p0>Type|<p1>Name}}", tooltip="Param"]
+
+# ReferenceLiteral a
+node14 -> node6 [style=dashed, constraint=false, color="#7BB800"]
+node14 [shape=box, label="a", fillcolor="#EAFDC5", tooltip="a"]
+
+# SimpleNode Identifier
+node15:s -> node14:n
+node15 [label="Identifier", tooltip="Identifier"]
+
+# ReferenceLiteral b
+node16 -> node12 [style=dashed, constraint=false, color="#7109AA"]
+node16 [shape=box, label="b", fillcolor="#E4C3F7", tooltip="b"]
+
+# SimpleNode Identifier
+node17:s -> node16:n
+node17 [label="Identifier", tooltip="Identifier"]
+
+# PortNode Addition
+node18:p0:s -> node15:n
+node18:p1:s -> node17:n
+node18 [label="{Addition|{<p0>Left|<p1>Right}}", tooltip="Addition"]
+
+# Literal 3
+node19 [shape=box, label="3", fillcolor="#cccccc", tooltip="3"]
+
+# SimpleNode IntLiteral
+node20:s -> node19:n
+node20 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode ElementSelect
+node21:p0:s -> node18:n
+node21:p1:s -> node20:n
+node21 [label="{ElementSelect|{<p0>Struct|<p1>Index}}", tooltip="ElementSelect"]
+
+# PortNode Return
+node22:p0:s -> node21:n
+node22 [label="{Return|{<p0>Value}}", tooltip="Return"]
+
+# PortNode Function
+node23:p0:s -> node0:n
+node23:p1:s -> node1:n
+node23:p2_0:s -> node7:n
+node23:p2_1:s -> node13:n
+node23:p3_0:s -> node22:n
+node23 [label="{Function|{<p0>ReturnType|<p1>Name|{Parameters|{<p2_0>1|<p2_1>2}}|{Statements|{<p3_0>1}}}}", tooltip="Function"]
+
+# SimpleNode VoidType
+node24 [label="VoidType", tooltip="VoidType"]
+
+# DeclarationLiteral main
+node25 [shape=box, label="main", fillcolor="#FFF5C6", tooltip="main"]
+
+# SimpleNode IntType
+node26 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral x
+node27 [shape=box, label="x", fillcolor="#C6D4F7", tooltip="x"]
+
+# ReferenceLiteral foo
+node28 -> node1 [style=dashed, constraint=false, color="#FF0000"]
+node28 [shape=box, label="foo", fillcolor="#FFC6C6", tooltip="foo"]
+
+# Literal 1
+node29 [shape=box, label="1", fillcolor="#cccccc", tooltip="1"]
+
+# SimpleNode IntLiteral
+node30:s -> node29:n
+node30 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 2
+node31 [shape=box, label="2", fillcolor="#cccccc", tooltip="2"]
+
+# SimpleNode IntLiteral
+node32:s -> node31:n
+node32 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 3
+node33 [shape=box, label="3", fillcolor="#cccccc", tooltip="3"]
+
+# SimpleNode IntLiteral
+node34:s -> node33:n
+node34 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 4
+node35 [shape=box, label="4", fillcolor="#cccccc", tooltip="4"]
+
+# SimpleNode IntLiteral
+node36:s -> node35:n
+node36 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 5
+node37 [shape=box, label="5", fillcolor="#cccccc", tooltip="5"]
+
+# SimpleNode IntLiteral
+node38:s -> node37:n
+node38 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode StructureInit
+node39:p0:s -> node30:n
+node39:p1:s -> node32:n
+node39:p2:s -> node34:n
+node39:p3:s -> node36:n
+node39:p4:s -> node38:n
+node39 [label="{StructureInit|{<p0>1|<p1>2|<p2>3|<p3>4|<p4>5}}", tooltip="StructureInit"]
+
+# Literal 9
+node40 [shape=box, label="9", fillcolor="#cccccc", tooltip="9"]
+
+# SimpleNode IntLiteral
+node41:s -> node40:n
+node41 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 8
+node42 [shape=box, label="8", fillcolor="#cccccc", tooltip="8"]
+
+# SimpleNode IntLiteral
+node43:s -> node42:n
+node43 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 7
+node44 [shape=box, label="7", fillcolor="#cccccc", tooltip="7"]
+
+# SimpleNode IntLiteral
+node45:s -> node44:n
+node45 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 6
+node46 [shape=box, label="6", fillcolor="#cccccc", tooltip="6"]
+
+# SimpleNode IntLiteral
+node47:s -> node46:n
+node47 [label="IntLiteral", tooltip="IntLiteral"]
+
+# Literal 5
+node48 [shape=box, label="5", fillcolor="#cccccc", tooltip="5"]
+
+# SimpleNode IntLiteral
+node49:s -> node48:n
+node49 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode StructureInit
+node50:p0:s -> node41:n
+node50:p1:s -> node43:n
+node50:p2:s -> node45:n
+node50:p3:s -> node47:n
+node50:p4:s -> node49:n
+node50 [label="{StructureInit|{<p0>1|<p1>2|<p2>3|<p3>4|<p4>5}}", tooltip="StructureInit"]
+
+# PortNode Call
+node51:p0:s -> node28:n
+node51:p1_0:s -> node39:n
+node51:p1_1:s -> node50:n
+node51 [label="{Call|{<p0>Function|{Arguments|{<p1_0>1|<p1_1>2}}}}", tooltip="Call"]
+
+# PortNode ValDef
+node52:p0:s -> node26:n
+node52:p1:s -> node27:n
+node52:p2:s -> node51:n
+node52 [label="{ValDef|{<p0>Type|<p1>Name|<p2>Value}}", tooltip="ValDef"]
+
+# PortNode Function
+node53:p0:s -> node24:n
+node53:p1:s -> node25:n
+node53:p3_0:s -> node52:n
+node53 [label="{Function|{<p0>ReturnType|<p1>Name|{Parameters|{}}|{Statements|{<p3_0>1}}}}", tooltip="Function"]
+
+# PortNode Module
+node54:p1_0:s -> node23:n
+node54:p1_1:s -> node53:n
+node54 [label="{Module|{{Records|{}}|{Functions|{<p1_0>1|<p1_1>2}}}}", tooltip="Module"]
+
+}

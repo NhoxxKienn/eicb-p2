@@ -1,0 +1,9 @@
+function void main(){
+
+	val matrix<int>[2][3] m = [ [1, 2, 3], [4, 5, 6] ];
+
+    val vector<int>[3] a = m[0];
+    val vector<int>[3] b = m[1];
+    
+    val int x = a .* b;  // 32
+}

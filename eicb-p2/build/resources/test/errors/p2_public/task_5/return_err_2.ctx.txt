@@ -1,0 +1,5 @@
+
+Misplaced return statement in line 8, column 8:
+
+Faulty node:
+> return true;

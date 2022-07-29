@@ -1,0 +1,8 @@
+
+MatrixLhsIdentifier can not be applied to type int.
+
+Faulty node in line 4, column 4:
+> x[0][0]
+
+Applicable types:
+> matrix

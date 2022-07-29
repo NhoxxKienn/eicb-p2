@@ -1,0 +1,84 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="1" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body/>
+      <returnType class="VoidType"/>
+    </Function>
+    <Function line="4" column="0" name="testA">
+      <returnTypeSpecifier class="RecordTypeSpecifier" line="4" column="9" recordTypeName="foo">
+        <type class="RecordType" name="foo">
+          <typeDeclaration line="14" column="0" name="foo">
+            <elements>
+              <RecordElementDeclaration line="15" column="4" name="x" isVariable="true">
+                <typeSpecifier class="IntTypeSpecifier" line="15" column="8">
+                  <type class="IntType"/>
+                </typeSpecifier>
+                <type class="IntType"/>
+              </RecordElementDeclaration>
+            </elements>
+          </typeDeclaration>
+        </type>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <ValueDefinition line="5" column="4" name="x">
+          <typeSpecifier class="RecordTypeSpecifier" line="5" column="8" recordTypeName="foo">
+            <type class="RecordType" name="foo">
+              <typeDeclaration reference="../../../../../returnTypeSpecifier/type/typeDeclaration"/>
+            </type>
+          </typeSpecifier>
+          <type class="RecordType" reference="../typeSpecifier/type"/>
+          <value class="CallExpression" line="5" column="16" functionName="testB">
+            <type class="RecordType" name="foo">
+              <typeDeclaration reference="../../../../../returnTypeSpecifier/type/typeDeclaration"/>
+            </type>
+            <actualParameters/>
+            <callee line="9" column="0" name="testB">
+              <returnTypeSpecifier class="RecordTypeSpecifier" line="9" column="9" recordTypeName="foo">
+                <type class="RecordType" reference="../../../type"/>
+              </returnTypeSpecifier>
+              <parameters/>
+              <body>
+                <ValueDefinition line="10" column="4" name="x">
+                  <typeSpecifier class="RecordTypeSpecifier" line="10" column="8" recordTypeName="foo">
+                    <type class="RecordType" name="foo">
+                      <typeDeclaration reference="../../../../../../../../../returnTypeSpecifier/type/typeDeclaration"/>
+                    </type>
+                  </typeSpecifier>
+                  <type class="RecordType" reference="../typeSpecifier/type"/>
+                  <value class="CallExpression" line="10" column="16" functionName="testA">
+                    <type class="RecordType" reference="../../../../../../../../returnTypeSpecifier/type"/>
+                    <actualParameters/>
+                    <callee reference="../../../../../../../.."/>
+                  </value>
+                </ValueDefinition>
+                <ReturnStatement line="11" column="4">
+                  <returnValue class="IdentifierReference" line="11" column="11" name="x">
+                    <type class="RecordType" reference="../../../ValueDefinition/typeSpecifier/type"/>
+                    <declaration class="ValueDefinition" reference="../../../ValueDefinition"/>
+                  </returnValue>
+                </ReturnStatement>
+              </body>
+              <returnType class="RecordType" reference="../../type"/>
+            </callee>
+          </value>
+        </ValueDefinition>
+        <ReturnStatement line="6" column="4">
+          <returnValue class="IdentifierReference" line="6" column="11" name="x">
+            <type class="RecordType" reference="../../../ValueDefinition/typeSpecifier/type"/>
+            <declaration class="ValueDefinition" reference="../../../ValueDefinition"/>
+          </returnValue>
+        </ReturnStatement>
+      </body>
+      <returnType class="RecordType" reference="../returnTypeSpecifier/type"/>
+    </Function>
+    <Function reference="../Function[2]/body/ValueDefinition/value/callee"/>
+  </functions>
+  <records>
+    <RecordTypeDeclaration reference="../../functions/Function[2]/returnTypeSpecifier/type/typeDeclaration"/>
+  </records>
+</Module>

@@ -1,0 +1,10 @@
+mavlc/testing/ErrorCompareTest.java
+ mavlc.testing.ErrorCompareTest
+mavlc/testing/TestUtils.java
+ mavlc.testing.TestUtils
+mavlc/testing/AstCompareTest.java
+ mavlc.testing.AstCompareTest
+mavlc/testing/AstComparator.java
+ mavlc.testing.AstComparator
+mavlc/testing/BaseCompareTest.java
+ mavlc.testing.BaseCompareTest

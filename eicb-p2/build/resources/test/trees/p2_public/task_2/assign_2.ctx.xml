@@ -1,0 +1,69 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="6" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="6" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <VariableDeclaration line="7" column="4" name="c">
+          <typeSpecifier class="RecordTypeSpecifier" line="7" column="8" recordTypeName="complex">
+            <type class="RecordType" name="complex">
+              <typeDeclaration line="1" column="0" name="complex">
+                <elements>
+                  <RecordElementDeclaration line="2" column="4" name="r" isVariable="true">
+                    <typeSpecifier class="FloatTypeSpecifier" line="2" column="8">
+                      <type class="FloatType"/>
+                    </typeSpecifier>
+                    <type class="FloatType"/>
+                  </RecordElementDeclaration>
+                  <RecordElementDeclaration line="3" column="4" name="i" isVariable="true">
+                    <typeSpecifier class="FloatTypeSpecifier" line="3" column="8">
+                      <type class="FloatType"/>
+                    </typeSpecifier>
+                    <type class="FloatType"/>
+                  </RecordElementDeclaration>
+                </elements>
+              </typeDeclaration>
+            </type>
+          </typeSpecifier>
+          <type class="RecordType" reference="../typeSpecifier/type"/>
+        </VariableDeclaration>
+        <VariableAssignment line="8" column="4">
+          <identifier line="8" column="4" name="c">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </identifier>
+          <value class="RecordInit" line="8" column="8" typeName="complex">
+            <type class="RecordType" name="complex">
+              <typeDeclaration reference="../../../../VariableDeclaration/typeSpecifier/type/typeDeclaration"/>
+            </type>
+            <elements>
+              <FloatValue line="8" column="17" value="3.141">
+                <type class="FloatType"/>
+              </FloatValue>
+              <FloatValue line="8" column="24" value="9000.1">
+                <type class="FloatType"/>
+              </FloatValue>
+            </elements>
+          </value>
+        </VariableAssignment>
+        <VariableAssignment line="9" column="4">
+          <identifier class="RecordLhsIdentifier" line="9" column="4" name="c" elementName="r">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </identifier>
+          <value class="RecordElementSelect" line="9" column="10" elementName="i">
+            <type class="FloatType"/>
+            <recordExpression class="IdentifierReference" line="9" column="10" name="c">
+              <type class="RecordType" reference="../../../../VariableDeclaration/typeSpecifier/type"/>
+              <declaration class="VariableDeclaration" reference="../../../../VariableDeclaration"/>
+            </recordExpression>
+          </value>
+        </VariableAssignment>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records>
+    <RecordTypeDeclaration reference="../../functions/Function/body/VariableDeclaration/typeSpecifier/type/typeDeclaration"/>
+  </records>
+</Module>

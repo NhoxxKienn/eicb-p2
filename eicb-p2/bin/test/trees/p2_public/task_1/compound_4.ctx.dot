@@ -1,0 +1,234 @@
+digraph {
+node [shape=Mrecord, style=filled, fillcolor=white, fontname="Calibri"];
+graph [ordering=out, nodesep=0.3, ranksep=1];
+
+# SimpleNode VoidType
+node0 [label="VoidType", tooltip="VoidType"]
+
+# DeclarationLiteral main
+node1 [shape=box, label="main", fillcolor="#FFC6C6", tooltip="main"]
+
+# SimpleNode IntType
+node2 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral x
+node3 [shape=box, label="x", fillcolor="#EAFDC5", tooltip="x"]
+
+# PortNode VarDecl
+node4:p0:s -> node2:n
+node4:p1:s -> node3:n
+node4 [label="{VarDecl|{<p0>Type|<p1>Name}}", tooltip="VarDecl"]
+
+# SimpleNode IntType
+node5 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral y
+node6 [shape=box, label="y", fillcolor="#E4C3F7", tooltip="y"]
+
+# PortNode VarDecl
+node7:p0:s -> node5:n
+node7:p1:s -> node6:n
+node7 [label="{VarDecl|{<p0>Type|<p1>Name}}", tooltip="VarDecl"]
+
+# ReferenceLiteral x
+node8 -> node3 [style=dashed, constraint=false, color="#7BB800"]
+node8 [shape=box, label="x", fillcolor="#EAFDC5", tooltip="x"]
+
+# PortNode SimpleLhs
+node9:p0:s -> node8:n
+node9 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# Literal 10
+node10 [shape=box, label="10", fillcolor="#cccccc", tooltip="10"]
+
+# SimpleNode IntLiteral
+node11:s -> node10:n
+node11 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode Assignment
+node12:p0:s -> node9:n
+node12:p1:s -> node11:n
+node12 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# SimpleNode IntType
+node13 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral x
+node14 [shape=box, label="x", fillcolor="#FFF5C6", tooltip="x"]
+
+# PortNode VarDecl
+node15:p0:s -> node13:n
+node15:p1:s -> node14:n
+node15 [label="{VarDecl|{<p0>Type|<p1>Name}}", tooltip="VarDecl"]
+
+# ReferenceLiteral x
+node16 -> node14 [style=dashed, constraint=false, color="#C5A300"]
+node16 [shape=box, label="x", fillcolor="#FFF5C6", tooltip="x"]
+
+# PortNode SimpleLhs
+node17:p0:s -> node16:n
+node17 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# Literal 33
+node18 [shape=box, label="33", fillcolor="#cccccc", tooltip="33"]
+
+# SimpleNode IntLiteral
+node19:s -> node18:n
+node19 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode Assignment
+node20:p0:s -> node17:n
+node20:p1:s -> node19:n
+node20 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# ReferenceLiteral y
+node21 -> node6 [style=dashed, constraint=false, color="#7109AA"]
+node21 [shape=box, label="y", fillcolor="#E4C3F7", tooltip="y"]
+
+# PortNode SimpleLhs
+node22:p0:s -> node21:n
+node22 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# ReferenceLiteral x
+node23 -> node14 [style=dashed, constraint=false, color="#C5A300"]
+node23 [shape=box, label="x", fillcolor="#FFF5C6", tooltip="x"]
+
+# SimpleNode Identifier
+node24:s -> node23:n
+node24 [label="Identifier", tooltip="Identifier"]
+
+# PortNode Assignment
+node25:p0:s -> node22:n
+node25:p1:s -> node24:n
+node25 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# SimpleNode IntType
+node26 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral y
+node27 [shape=box, label="y", fillcolor="#C6D4F7", tooltip="y"]
+
+# Literal 33
+node28 [shape=box, label="33", fillcolor="#cccccc", tooltip="33"]
+
+# SimpleNode IntLiteral
+node29:s -> node28:n
+node29 [label="IntLiteral", tooltip="IntLiteral"]
+
+# PortNode ValDef
+node30:p0:s -> node26:n
+node30:p1:s -> node27:n
+node30:p2:s -> node29:n
+node30 [label="{ValDef|{<p0>Type|<p1>Name|<p2>Value}}", tooltip="ValDef"]
+
+# ReferenceLiteral x
+node31 -> node14 [style=dashed, constraint=false, color="#C5A300"]
+node31 [shape=box, label="x", fillcolor="#FFF5C6", tooltip="x"]
+
+# PortNode SimpleLhs
+node32:p0:s -> node31:n
+node32 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# ReferenceLiteral y
+node33 -> node27 [style=dashed, constraint=false, color="#1240AB"]
+node33 [shape=box, label="y", fillcolor="#C6D4F7", tooltip="y"]
+
+# SimpleNode Identifier
+node34:s -> node33:n
+node34 [label="Identifier", tooltip="Identifier"]
+
+# PortNode Assignment
+node35:p0:s -> node32:n
+node35:p1:s -> node34:n
+node35 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# PortNode Compound
+node36:p0:s -> node30:n
+node36:p1:s -> node35:n
+node36 [label="{Compound|{<p0>1|<p1>2}}", tooltip="Compound"]
+
+# PortNode Compound
+node37:p0:s -> node15:n
+node37:p1:s -> node20:n
+node37:p2:s -> node25:n
+node37:p3:s -> node36:n
+node37 [label="{Compound|{<p0>1|<p1>2|<p2>3|<p3>4}}", tooltip="Compound"]
+
+# SimpleNode IntType
+node38 [label="IntType", tooltip="IntType"]
+
+# DeclarationLiteral y
+node39 [shape=box, label="y", fillcolor="#FFE0C6", tooltip="y"]
+
+# PortNode VarDecl
+node40:p0:s -> node38:n
+node40:p1:s -> node39:n
+node40 [label="{VarDecl|{<p0>Type|<p1>Name}}", tooltip="VarDecl"]
+
+# ReferenceLiteral y
+node41 -> node39 [style=dashed, constraint=false, color="#FF7400"]
+node41 [shape=box, label="y", fillcolor="#FFE0C6", tooltip="y"]
+
+# PortNode SimpleLhs
+node42:p0:s -> node41:n
+node42 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# ReferenceLiteral x
+node43 -> node3 [style=dashed, constraint=false, color="#7BB800"]
+node43 [shape=box, label="x", fillcolor="#EAFDC5", tooltip="x"]
+
+# SimpleNode Identifier
+node44:s -> node43:n
+node44 [label="Identifier", tooltip="Identifier"]
+
+# PortNode Assignment
+node45:p0:s -> node42:n
+node45:p1:s -> node44:n
+node45 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# PortNode Compound
+node46:p0:s -> node40:n
+node46:p1:s -> node45:n
+node46 [label="{Compound|{<p0>1|<p1>2}}", tooltip="Compound"]
+
+# ReferenceLiteral y
+node47 -> node6 [style=dashed, constraint=false, color="#7109AA"]
+node47 [shape=box, label="y", fillcolor="#E4C3F7", tooltip="y"]
+
+# PortNode SimpleLhs
+node48:p0:s -> node47:n
+node48 [label="{SimpleLhs|{<p0>Name}}", tooltip="SimpleLhs"]
+
+# ReferenceLiteral x
+node49 -> node3 [style=dashed, constraint=false, color="#7BB800"]
+node49 [shape=box, label="x", fillcolor="#EAFDC5", tooltip="x"]
+
+# SimpleNode Identifier
+node50:s -> node49:n
+node50 [label="Identifier", tooltip="Identifier"]
+
+# PortNode Assignment
+node51:p0:s -> node48:n
+node51:p1:s -> node50:n
+node51 [label="{Assignment|{<p0>Target|<p1>Value}}", tooltip="Assignment"]
+
+# PortNode Compound
+node52:p0:s -> node46:n
+node52:p1:s -> node51:n
+node52 [label="{Compound|{<p0>1|<p1>2}}", tooltip="Compound"]
+
+# PortNode Function
+node53:p0:s -> node0:n
+node53:p1:s -> node1:n
+node53:p3_0:s -> node4:n
+node53:p3_1:s -> node7:n
+node53:p3_2:s -> node12:n
+node53:p3_3:s -> node37:n
+node53:p3_4:s -> node52:n
+node53 [label="{Function|{<p0>ReturnType|<p1>Name|{Parameters|{}}|{Statements|{<p3_0>1|<p3_1>2|<p3_2>3|<p3_3>4|<p3_4>5}}}}", tooltip="Function"]
+
+# PortNode Module
+node54:p1_0:s -> node53:n
+node54 [label="{Module|{{Records|{}}|{Functions|{<p1_0>1}}}}", tooltip="Module"]
+
+}

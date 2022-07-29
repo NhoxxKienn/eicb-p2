@@ -1,0 +1,115 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="1" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <VariableDeclaration line="2" column="4" name="x">
+          <typeSpecifier class="IntTypeSpecifier" line="2" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+        </VariableDeclaration>
+        <VariableDeclaration line="3" column="4" name="y">
+          <typeSpecifier class="IntTypeSpecifier" line="3" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+        </VariableDeclaration>
+        <VariableAssignment line="5" column="4">
+          <identifier line="5" column="4" name="x">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </identifier>
+          <value class="IntValue" line="5" column="8" value="10">
+            <type class="IntType"/>
+          </value>
+        </VariableAssignment>
+        <CompoundStatement line="7" column="4">
+          <statements>
+            <VariableDeclaration line="8" column="8" name="x">
+              <typeSpecifier class="IntTypeSpecifier" line="8" column="12">
+                <type class="IntType"/>
+              </typeSpecifier>
+              <type class="IntType"/>
+            </VariableDeclaration>
+            <VariableAssignment line="9" column="8">
+              <identifier line="9" column="8" name="x">
+                <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+              </identifier>
+              <value class="IntValue" line="9" column="12" value="33">
+                <type class="IntType"/>
+              </value>
+            </VariableAssignment>
+            <VariableAssignment line="10" column="8">
+              <identifier line="10" column="8" name="y">
+                <declaration class="VariableDeclaration" reference="../../../../../VariableDeclaration[2]"/>
+              </identifier>
+              <value class="IdentifierReference" line="10" column="12" name="x">
+                <type class="IntType"/>
+                <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+              </value>
+            </VariableAssignment>
+            <CompoundStatement line="11" column="8">
+              <statements>
+                <ValueDefinition line="12" column="12" name="y">
+                  <typeSpecifier class="IntTypeSpecifier" line="12" column="16">
+                    <type class="IntType"/>
+                  </typeSpecifier>
+                  <type class="IntType"/>
+                  <value class="IntValue" line="12" column="24" value="33">
+                    <type class="IntType"/>
+                  </value>
+                </ValueDefinition>
+                <VariableAssignment line="13" column="12">
+                  <identifier line="13" column="12" name="x">
+                    <declaration class="VariableDeclaration" reference="../../../../../VariableDeclaration"/>
+                  </identifier>
+                  <value class="IdentifierReference" line="13" column="16" name="y">
+                    <type class="IntType"/>
+                    <declaration class="ValueDefinition" reference="../../../ValueDefinition"/>
+                  </value>
+                </VariableAssignment>
+              </statements>
+            </CompoundStatement>
+          </statements>
+        </CompoundStatement>
+        <CompoundStatement line="17" column="4">
+          <statements>
+            <CompoundStatement line="18" column="8">
+              <statements>
+                <VariableDeclaration line="19" column="12" name="y">
+                  <typeSpecifier class="IntTypeSpecifier" line="19" column="16">
+                    <type class="IntType"/>
+                  </typeSpecifier>
+                  <type class="IntType"/>
+                </VariableDeclaration>
+                <VariableAssignment line="20" column="12">
+                  <identifier line="20" column="12" name="y">
+                    <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+                  </identifier>
+                  <value class="IdentifierReference" line="20" column="16" name="x">
+                    <type class="IntType"/>
+                    <declaration class="VariableDeclaration" reference="../../../../../../../VariableDeclaration"/>
+                  </value>
+                </VariableAssignment>
+              </statements>
+            </CompoundStatement>
+            <VariableAssignment line="22" column="8">
+              <identifier line="22" column="8" name="y">
+                <declaration class="VariableDeclaration" reference="../../../../../VariableDeclaration[2]"/>
+              </identifier>
+              <value class="IdentifierReference" line="22" column="12" name="x">
+                <type class="IntType"/>
+                <declaration class="VariableDeclaration" reference="../../../../../VariableDeclaration"/>
+              </value>
+            </VariableAssignment>
+          </statements>
+        </CompoundStatement>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records/>
+</Module>

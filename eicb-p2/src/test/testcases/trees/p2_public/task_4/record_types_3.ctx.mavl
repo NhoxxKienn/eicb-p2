@@ -1,0 +1,16 @@
+function void main() {
+}
+
+function foo testA() {
+	val foo x = testB();
+	return x;
+}
+
+function foo testB() {
+	val foo x = testA();
+	return x;
+}
+
+record foo {
+	var int x;
+}

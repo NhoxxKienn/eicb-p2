@@ -1,0 +1,127 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="foo">
+      <returnTypeSpecifier class="IntTypeSpecifier" line="1" column="9">
+        <type class="IntType"/>
+      </returnTypeSpecifier>
+      <parameters>
+        <FormalParameter line="1" column="17" name="a">
+          <typeSpecifier class="VectorTypeSpecifier" line="1" column="17">
+            <type class="VectorType" dimension="5">
+              <elementType class="IntType"/>
+            </type>
+            <elementTypeSpecifier class="IntTypeSpecifier" line="1" column="24">
+              <type class="IntType"/>
+            </elementTypeSpecifier>
+            <dimensionExpression class="IntValue" line="1" column="29" value="5">
+              <type class="IntType"/>
+            </dimensionExpression>
+          </typeSpecifier>
+          <type class="VectorType" reference="../typeSpecifier/type"/>
+        </FormalParameter>
+        <FormalParameter line="1" column="35" name="b">
+          <typeSpecifier class="VectorTypeSpecifier" line="1" column="35">
+            <type class="VectorType" dimension="5">
+              <elementType class="IntType"/>
+            </type>
+            <elementTypeSpecifier class="IntTypeSpecifier" line="1" column="42">
+              <type class="IntType"/>
+            </elementTypeSpecifier>
+            <dimensionExpression class="IntValue" line="1" column="47" value="5">
+              <type class="IntType"/>
+            </dimensionExpression>
+          </typeSpecifier>
+          <type class="VectorType" reference="../typeSpecifier/type"/>
+        </FormalParameter>
+      </parameters>
+      <body>
+        <ReturnStatement line="2" column="4">
+          <returnValue class="ElementSelect" line="2" column="11">
+            <type class="IntType"/>
+            <structExpression class="Addition" line="2" column="12">
+              <type class="VectorType" reference="../../../../../parameters/FormalParameter/typeSpecifier/type"/>
+              <leftOperand class="IdentifierReference" line="2" column="12" name="a">
+                <type class="VectorType" reference="../../../../../../parameters/FormalParameter/typeSpecifier/type"/>
+                <declaration class="FormalParameter" reference="../../../../../../parameters/FormalParameter"/>
+              </leftOperand>
+              <rightOperand class="IdentifierReference" line="2" column="16" name="b">
+                <type class="VectorType" reference="../../../../../../parameters/FormalParameter[2]/typeSpecifier/type"/>
+                <declaration class="FormalParameter" reference="../../../../../../parameters/FormalParameter[2]"/>
+              </rightOperand>
+            </structExpression>
+            <indexExpression class="IntValue" line="2" column="19" value="3">
+              <type class="IntType"/>
+            </indexExpression>
+          </returnValue>
+        </ReturnStatement>
+      </body>
+      <returnType class="IntType"/>
+    </Function>
+    <Function line="5" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="5" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <ValueDefinition line="6" column="2" name="x">
+          <typeSpecifier class="IntTypeSpecifier" line="6" column="6">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+          <value class="CallExpression" line="6" column="14" functionName="foo">
+            <type class="IntType"/>
+            <actualParameters>
+              <StructureInit line="6" column="18">
+                <type class="VectorType" dimension="5">
+                  <elementType class="IntType"/>
+                </type>
+                <elements>
+                  <IntValue line="6" column="19" value="1">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="21" value="2">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="23" value="3">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="25" value="4">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="27" value="5">
+                    <type class="IntType"/>
+                  </IntValue>
+                </elements>
+              </StructureInit>
+              <StructureInit line="6" column="31">
+                <type class="VectorType" dimension="5">
+                  <elementType class="IntType"/>
+                </type>
+                <elements>
+                  <IntValue line="6" column="32" value="9">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="34" value="8">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="36" value="7">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="38" value="6">
+                    <type class="IntType"/>
+                  </IntValue>
+                  <IntValue line="6" column="40" value="5">
+                    <type class="IntType"/>
+                  </IntValue>
+                </elements>
+              </StructureInit>
+            </actualParameters>
+            <callee reference="../../../../../Function"/>
+          </value>
+        </ValueDefinition>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records/>
+</Module>

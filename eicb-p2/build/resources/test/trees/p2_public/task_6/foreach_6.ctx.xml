@@ -1,0 +1,106 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="1" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <ValueDefinition line="2" column="4" name="v">
+          <typeSpecifier class="VectorTypeSpecifier" line="2" column="8">
+            <type class="VectorType" dimension="2">
+              <elementType class="FloatType"/>
+            </type>
+            <elementTypeSpecifier class="FloatTypeSpecifier" line="2" column="15">
+              <type class="FloatType"/>
+            </elementTypeSpecifier>
+            <dimensionExpression class="IntValue" line="2" column="22" value="2">
+              <type class="IntType"/>
+            </dimensionExpression>
+          </typeSpecifier>
+          <type class="VectorType" reference="../typeSpecifier/type"/>
+          <value class="StructureInit" line="2" column="29">
+            <type class="VectorType" dimension="2">
+              <elementType class="FloatType"/>
+            </type>
+            <elements>
+              <FloatValue line="2" column="30" value="2.5">
+                <type class="FloatType"/>
+              </FloatValue>
+              <FloatValue line="2" column="35" value="3.1">
+                <type class="FloatType"/>
+              </FloatValue>
+            </elements>
+          </value>
+        </ValueDefinition>
+        <VariableDeclaration line="3" column="4" name="m">
+          <typeSpecifier class="FloatTypeSpecifier" line="3" column="8">
+            <type class="FloatType"/>
+          </typeSpecifier>
+          <type class="FloatType"/>
+        </VariableDeclaration>
+        <VariableAssignment line="4" column="4">
+          <identifier line="4" column="4" name="m">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </identifier>
+          <value class="FloatValue" line="4" column="8" value="0.0">
+            <type class="FloatType"/>
+          </value>
+        </VariableAssignment>
+        <ForEachLoop line="5" column="4">
+          <iteratorDeclaration line="5" column="12" name="i" isVariable="false">
+            <typeSpecifier class="FloatTypeSpecifier" line="5" column="16">
+              <type class="FloatType"/>
+            </typeSpecifier>
+            <type class="FloatType"/>
+          </iteratorDeclaration>
+          <structExpression class="Multiplication" line="5" column="26">
+            <type class="VectorType" reference="../../../ValueDefinition/typeSpecifier/type"/>
+            <leftOperand class="IdentifierReference" line="5" column="26" name="v">
+              <type class="VectorType" reference="../../../../ValueDefinition/typeSpecifier/type"/>
+              <declaration class="ValueDefinition" reference="../../../../ValueDefinition"/>
+            </leftOperand>
+            <rightOperand class="StructureInit" line="5" column="30">
+              <type class="VectorType" dimension="2">
+                <elementType class="FloatType"/>
+              </type>
+              <elements>
+                <UnaryMinus line="5" column="31">
+                  <type class="FloatType"/>
+                  <operand class="FloatValue" line="5" column="32" value="1.0">
+                    <type class="FloatType"/>
+                  </operand>
+                </UnaryMinus>
+                <FloatValue line="5" column="37" value="2.0">
+                  <type class="FloatType"/>
+                </FloatValue>
+              </elements>
+            </rightOperand>
+          </structExpression>
+          <body class="CompoundStatement" line="5" column="43">
+            <statements>
+              <VariableAssignment line="6" column="8">
+                <identifier line="6" column="8" name="m">
+                  <declaration class="VariableDeclaration" reference="../../../../../../VariableDeclaration"/>
+                </identifier>
+                <value class="Multiplication" line="6" column="12">
+                  <type class="FloatType"/>
+                  <leftOperand class="IdentifierReference" line="6" column="12" name="m">
+                    <type class="FloatType"/>
+                    <declaration class="VariableDeclaration" reference="../../../../../../../VariableDeclaration"/>
+                  </leftOperand>
+                  <rightOperand class="IdentifierReference" line="6" column="16" name="i">
+                    <type class="FloatType"/>
+                    <declaration class="IteratorDeclaration" reference="../../../../../../iteratorDeclaration"/>
+                  </rightOperand>
+                </value>
+              </VariableAssignment>
+            </statements>
+          </body>
+        </ForEachLoop>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records/>
+</Module>

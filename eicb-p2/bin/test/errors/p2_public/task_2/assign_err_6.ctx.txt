@@ -1,0 +1,9 @@
+
+Invalid assignment in line 3, column 4:
+> Cannot assign constant identifier 'v'.
+
+Faulty node:
+> v[0]
+
+Identifier declaration in line 2, column 4:
+> val vector<int>[1] v = [5];

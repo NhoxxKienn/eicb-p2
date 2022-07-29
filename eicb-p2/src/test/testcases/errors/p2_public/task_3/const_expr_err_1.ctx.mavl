@@ -1,0 +1,4 @@
+function void main() {
+	val int x = 2;
+	var vector<int>[5 * (1 + x)] y;
+}

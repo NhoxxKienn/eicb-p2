@@ -1,0 +1,5 @@
+
+Constant expression expected in line 3, column 29:
+
+Faulty node:
+> x

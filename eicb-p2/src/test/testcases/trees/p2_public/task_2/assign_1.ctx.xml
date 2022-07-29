@@ -1,0 +1,62 @@
+<Module line="1" column="0">
+  <functions>
+    <Function line="1" column="0" name="main">
+      <returnTypeSpecifier class="VoidTypeSpecifier" line="1" column="9">
+        <type class="VoidType"/>
+      </returnTypeSpecifier>
+      <parameters/>
+      <body>
+        <VariableDeclaration line="2" column="4" name="x">
+          <typeSpecifier class="IntTypeSpecifier" line="2" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+        </VariableDeclaration>
+        <VariableDeclaration line="3" column="4" name="y">
+          <typeSpecifier class="IntTypeSpecifier" line="3" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+        </VariableDeclaration>
+        <VariableAssignment line="5" column="4">
+          <identifier line="5" column="4" name="x">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </identifier>
+          <value class="IntValue" line="5" column="8" value="11">
+            <type class="IntType"/>
+          </value>
+        </VariableAssignment>
+        <VariableAssignment line="6" column="4">
+          <identifier line="6" column="4" name="y">
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration[2]"/>
+          </identifier>
+          <value class="IntValue" line="6" column="8" value="22">
+            <type class="IntType"/>
+          </value>
+        </VariableAssignment>
+        <ValueDefinition line="8" column="4" name="z">
+          <typeSpecifier class="IntTypeSpecifier" line="8" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+          <value class="IdentifierReference" line="8" column="16" name="x">
+            <type class="IntType"/>
+            <declaration class="VariableDeclaration" reference="../../../VariableDeclaration"/>
+          </value>
+        </ValueDefinition>
+        <ValueDefinition line="9" column="4" name="u">
+          <typeSpecifier class="IntTypeSpecifier" line="9" column="8">
+            <type class="IntType"/>
+          </typeSpecifier>
+          <type class="IntType"/>
+          <value class="IdentifierReference" line="9" column="16" name="z">
+            <type class="IntType"/>
+            <declaration class="ValueDefinition" reference="../../../ValueDefinition"/>
+          </value>
+        </ValueDefinition>
+      </body>
+      <returnType class="VoidType"/>
+    </Function>
+  </functions>
+  <records/>
+</Module>
